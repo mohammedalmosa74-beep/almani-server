@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Tahoma,sans-serif;background:#f0f2f5;color:#1a1a2e;min-height:100vh}
+:root{--g:#1b6b3a;--gl:#22c55e;--gb:#e8f5e9;--r:#ef4444;--o:#f59e0b;--b:#3b82f6;--c:#fff;--cb:#e2e6ea;--t2:#6b7280;--r2:12px;--r3:16px}
+/* Login */
+#lp{position:fixed;inset:0;z-index:100;background:linear-gradient(160deg,#1b6b3a,#14532d);display:flex;align-items:center;justify-content:center;padding:20px}
+#lp.h{display:none}
+.lb{background:#fff;border-radius:20px;padding:36px 28px;width:100%;max-width:360px;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,.15)}
+.lb h1{font-size:20px;font-weight:800;margin-bottom:4px}
+.lb p{font-size:13px;color:#6b7280;margin-bottom:24px}
+.lb .ic{width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,#1b6b3a,#22c55e);display:flex;align-items:center;justify-content:center;font-size:22px;color:#fff;margin:0 auto 12px}
+.iw{background:#f0f2f5;border:2px solid #e2e6ea;border-radius:12px;padding:0 14px;display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.iw:focus-within{border-color:#1b6b3a}
+.iw input{flex:1;padding:12px 0;font-size:14px;border:none;outline:none;background:none}
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:10px 18px;border-radius:10px;font-size:13px;font-weight:700;cursor:pointer;border:none;transition:all .2s}
+.btn-p{background:#1b6b3a;color:#fff}
+.btn-p:hover{background:#14532d}
+.btn-o{background:#fff;border:2px solid #1b6b3a;color:#1b6b3a}
+.btn-d{background:#fee2e2;color:#ef4444}
+.btn-s{background:#e2e6ea;color:#1a1a2e;font-size:11px;padding:4px 10px;border-radius:6px}
+.w{width:100%}
+/* Shell */
+#sh{display:none;height:100vh;flex-direction:column;max-width:1200px;margin:0 auto}
+#sh.s{display:flex}
+.tb{background:#fff;border-bottom:1px solid #e2e6ea;padding:0 20px;height:56px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.tb .br{display:flex;align-items:center;gap:10px}
+.tb .br h1{font-size:16px;font-weight:800}
+.tb .br span{font-size:11px;color:#6b7280}
+.tb .ui{display:flex;align-items:center;gap:12px;font-size:12px;color:#6b7280}
+.tb .lo{width:34px;height:34px;border-radius:50%;background:#fee2e2;display:flex;align-items:center;justify-content:center;color:#ef4444;cursor:pointer;font-size:13px}
+/* Layout */
+.mw{display:flex;flex:1;overflow:hidden}
+.sb{width:180px;background:#fff;border-left:1px solid #e2e6ea;padding:12px 0;flex-shrink:0;overflow-y:auto}
+.si{display:flex;align-items:center;gap:10px;padding:10px 16px;cursor:pointer;font-size:13px;font-weight:600;color:#6b7280;border-right:3px solid transparent;transition:all .2s}
+.si:hover{background:#e8f5e9;color:#1b6b3a}
+.si.a{background:#e8f5e9;color:#1b6b3a;border-right-color:#1b6b3a}
+.co{flex:1;overflow-y:auto;padding:16px}
+/* Toast */
+#tt{position:fixed;top:12px;left:50%;transform:translateX(-50%) translateY(-100px);background:#fff;border-radius:12px;padding:10px 18px;z-index:9999;font-size:13px;font-weight:600;box-shadow:0 4px 20px rgba(0,0,0,.12);transition:transform .3s;border:1px solid #e2e6ea;max-width:90%}
+#tt.s{transform:translateX(-50%) translateY(0)}
+#tt.e{border-color:#ef4444;color:#ef4444}
+#tt.ok{border-color:#1b6b3a;color:#1b6b3a}
+/* Cards */
+.cd{background:#fff;border-radius:14px;border:1px solid #e2e6ea;padding:16px;margin-bottom:14px}
+.ch{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:8px}
+.ch h3{font-size:16px;font-weight:800}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:16px}
+.sc{background:#fff;border:1px solid #e2e6ea;border-radius:10px;padding:14px;text-align:center}
+.sc .n{font-size:26px;font-weight:900;color:#1b6b3a}
+.sc .l{font-size:11px;color:#6b7280;margin-top:4px}
+/* Tables */
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{text-align:right;padding:8px 10px;color:#6b7280;font-weight:700;font-size:11px;border-bottom:2px solid #e2e6ea;white-space:nowrap}
+td{padding:8px 10px;border-bottom:1px solid #e2e6ea}
+tr:hover td{background:#f8f9fa}
+.ac{display:flex;gap:4px}
+/* Badges */
+.bg{display:inline-block;padding:2px 8px;border-radius:12px;font-size:10px;font-weight:700}
+.bp{background:#fef3c7;color:#d97706}
+.bc{background:#dbeafe;color:#2563eb}
+.bpr{background:#e0f2fe;color:#0891b2}
+.bd{background:#e0f2fe;color:#0891b2}
+.bdv{background:#dcfce7;color:#16a34a}
+.bcn{background:#fee2e2;color:#ef4444}
+/* Modal */
+.mo{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.4);display:none;align-items:center;justify-content:center;padding:20px}
+.mo.s{display:flex}
+.mb{background:#fff;border-radius:16px;padding:24px;width:100%;max-width:500px;max-height:90vh;overflow-y:auto}
+.mb h3{font-size:18px;font-weight:800;margin-bottom:16px}
+.fg{margin-bottom:12px}
+.fg label{display:block;font-size:12px;font-weight:600;color:#6b7280;margin-bottom:4px}
+.fg input,.fg select{width:100%;padding:10px 12px;font-size:13px;border:1.5px solid #e2e6ea;border-radius:10px;background:#f8f9fa;outline:none}
+.fg input:focus,.fg select:focus{border-color:#1b6b3a}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fa{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
+.em{text-align:center;padding:40px 20px;color:#6b7280;font-size:14px}
+</style>
+</head>
+<body>
+
+<div id="lp">
+  <div class="lb">
+    <div class="ic">A</div>
+    <h1>لوحة التحكم</h1>
+    <p>سوبر ماركت ألماني</p>
+    <div class="iw"><input type="password" id="pwd" placeholder="كلمة المرور"></div>
+    <button class="btn btn-p w" onclick="login()">دخول</button>
+  </div>
+</div>
+
+<div id="sh">
+  <div class="tb">
+    <div class="br"><div><h1>لوحة التحكم</h1><span>سوبر ماركت ألماني</span></div></div>
+    <div class="ui"><span id="clk"></span><div class="lo" onclick="logout()">خروج</div></div>
+  </div>
+  <div class="mw">
+    <div class="sb" id="menu"></div>
+    <div class="co" id="pg"></div>
+  </div>
+</div>
+
+<div id="tt"></div>
+<div class="mo" id="md"><div class="mb" id="mbx"></div></div>
+
+<script>
+const API=window.location.origin;
+let tok=localStorage.getItem('t'),usr=null;
+
+function q(s){return document.getElementById(s)}
+function v(s){return (q(s)||{}).value||''}
+function cv(s){return Number(v(s))||0}
+function sv(n,f){return (n||0).toLocaleString('ar-SA')+(f||'')}
+function msg(t,c){const e=q('tt');e.textContent=t;e.className=c?'s '+c:'s';e.classList.add('s');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('s'),2500)}
+
+const menuData=[
+  {id:'dash',l:'الإحصائيات',i:'D'},
+  {id:'prods',l:'المنتجات',i:'P'},
+  {id:'ords',l:'الطلبات',i:'O'},
+  {id:'cats',l:'الأقسام',i:'C'},
+  {id:'sets',l:'الإعدادات',i:'S'}
+];
+
+function renderMenu(){
+  const el=q('menu');el.innerHTML='';
+  menuData.forEach(m=>{
+    const d=document.createElement('div');
+    d.className='si';d.textContent=m.l;
+    d.onclick=()=>showPage(m.id);
+    el.appendChild(d);
+  });
+}
+
+async function api(m,p,b){
+  const o={method:m,headers:{'Content-Type':'application/json'}};
+  if(tok) o.headers['Authorization']='Bearer '+tok;
+  if(b) o.body=JSON.stringify(b);
+  const r=await fetch(API+p,o);
+  if(r.status===401){tok=null;localStorage.removeItem('t');q('lp').classList.remove('h');q('sh').classList.remove('s');throw new Error('انتهت الجلسة')}
+  const d=await r.json();
+  if(!d.success) throw new Error(d.error||'خطأ');
+  return d.data;
+}
+
+async function login(){
+  const p=v('pwd');if(!p){msg('أدخل كلمة المرور','e');return}
+  try{
+    const d=await api('POST','/api/auth/login',{password:p});
+    tok=d.token;localStorage.setItem('t',tok);
+    q('lp').classList.add('h');q('sh').classList.add('s');
+    showPage('dash');
+  }catch(e){msg(e.message||'خطأ في الاتصال','e')}
+}
+
+function logout(){
+  tok=null;localStorage.removeItem('t');
+  q('sh').classList.remove('s');q('lp').classList.remove('h');
+}
+
+function showPage(id){
+  document.querySelectorAll('.si').forEach(s=>s.classList.remove('a'));
+  document.querySelector(`.si:nth-child(${menuData.findIndex(m=>m.id===id)+1})`)?.classList.add('a');
+  if(id==='dash') renderDash();
+  else if(id==='prods') renderProds();
+  else if(id==='ords') renderOrds();
+  else if(id==='cats') renderCats();
+  else if(id==='sets') renderSets();
+}
+
+// === DASHBOARD ===
+async function renderDash(){
+  const el=q('pg');el.innerHTML='<div class="em">جاري التحميل...</div>';
+  try{
+    const [prods,ords,stats]=await Promise.all([
+      api('GET','/api/products'),api('GET','/api/orders?limit=5'),api('GET','/api/orders/stats')
+    ]);
+    const active=prods.filter(p=>p.active!==false).length;
+    el.innerHTML=`
+      <div class="sr">
+        <div class="sc"><div class="n">${prods.length}</div><div class="l">إجمالي المنتجات</div></div>
+        <div class="sc"><div class="n" style="color:var(--gl)">${active}</div><div class="l">المنتجات النشطة</div></div>
+        <div class="sc"><div class="n" style="color:#d97706">${(stats.pending||0)+(stats.confirmed||0)}</div><div class="l">طلبات pending</div></div>
+        <div class="sc"><div class="n" style="color:var(--gl)">${stats.delivered||0}</div><div class="l">طلبات مكتملة</div></div>
+        <div class="sc"><div class="n" style="color:var(--r)">${stats.cancelled||0}</div><div class="l">طلبات ملغية</div></div>
+      </div>
+      <div class="cd">
+        <div class="ch"><h3>حالة الطلبات</h3></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(70px,1fr));gap:8px">
+          ${[['pending','قيد المراجعة'],['confirmed','مؤكد'],['preparing','تحضير'],['delivering','توصيل'],['delivered','مكتمل'],['cancelled','ملغي']].map(([k,v])=>`<div class="sc"><div class="n" style="font-size:20px">${stats[k]||0}</div><div class="l">${v}</div></div>`).join('')}
+        </div>
+      </div>
+      <div class="cd">
+        <div class="ch"><h3>آخر الطلبات</h3></div>
+        ${ords.length?`<div class="tw"><table><tr><th>الطلب</th><th>العميل</th><th>المبلغ</th><th>الحالة</th><th>التاريخ</th></tr>${ords.map(o=>`<tr><td style="font-weight:700;color:#1b6b3a;font-size:11px">${o.id}</td><td>${o.phone?'+963 '+o.phone:'—'}</td><td>${sv(o.total)} ل.س</td><td><span class="bg ${o.status}">${{pending:'pending',confirmed:'confirmed',preparing:'preparing',delivering:'delivering',delivered:'delivered',cancelled:'cancelled'}[o.status]||o.status}</span></td><td style="font-size:11px;color:#6b7280">${new Date(o.date).toLocaleDateString('ar-SA',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})}</td></tr>`).join('')}</table></div>`:'<div class="em">لا توجد طلبات</div>'}
+      </div>`;
+  }catch(e){el.innerHTML='<div class="em">'+e.message+'</div>'}
+}
+
+// === PRODUCTS ===
+async function renderProds(){
+  const el=q('pg');el.innerHTML='<div class="em">جاري التحميل...</div>';
+  try{
+    const prods=await api('GET','/api/products');
+    const cats=await api('GET','/api/categories');
+    const catMap={};cats.forEach(c=>catMap[c.id]=c.name);
+    el.innerHTML=`
+      <div class="cd">
+        <div class="ch"><h3>المنتجات (${prods.length})</h3><button class="btn btn-p btn-s" onclick="openProd()">+ إضافة</button></div>
+        ${prods.length?`<div class="tw"><table><tr><th>#</th><th>الاسم</th><th>القسم</th><th>السعر</th><th>نشط</th><th></th></tr>${prods.map((p,i)=>`
+          <tr><td>${i+1}</td>
+          <td style="font-weight:600">${p.name}${p.sub?' <span style="color:#6b7280;font-size:11px">'+p.sub+'</span>':''}</td>
+          <td>${catMap[p.cat]||p.cat}</td>
+          <td>${sv(p.price)} ل.س${p.discount?` <span style="color:#ef4444;font-size:10px">-${p.discount}%</span>`:''}</td>
+          <td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${p.active!==false?'#22c55e':'#e2e6ea'}"></span></td>
+          <td><div class="ac"><button class="btn btn-s btn-o" onclick="toggleProd(${p.id})">${p.active!==false?'تعطيل':'تفعيل'}</button><button class="btn btn-s" onclick="openProd(${p.id})">تعديل</button><button class="btn btn-s btn-d" onclick="delProd(${p.id})">حذف</button></div></td></tr>
+        `).join('')}</table></div>`:'<div class="em">لا توجد منتجات</div>'}
+      </div>`;
+  }catch(e){el.innerHTML='<div class="em">'+e.message+'</div>'}
+}
+
+async function toggleProd(id){
+  try{await api('PATCH','/api/products/'+id+'/toggle');msg('تم التحديث','ok');renderProds()}catch(e){msg(e.message,'e')}
+}
+async function delProd(id){
+  if(!confirm('حذف المنتج؟'))return;
+  try{await api('DELETE','/api/products/'+id);msg('تم الحذف','ok');renderProds()}catch(e){msg(e.message,'e')}
+}
+
+async function openProd(id){
+  let p=null;
+  if(id){
+    try{p=await api('GET','/api/products/'+id)}catch(e){msg(e.message,'e');return}
+  }
+  const cats=await api('GET','/api/categories');
+  q('md').classList.add('s');
+  q('mbx').innerHTML=`
+    <h3>${id?'تعديل':'إضافة'} منتج</h3>
+    <div class="fg"><label>الاسم *</label><input id="f-name" value="${p?p.name:''}"></div>
+    <div class="fg"><label>الاسم الألماني</label><input id="f-sub" value="${p?p.sub||'':''}"></div>
+    <div class="fr">
+      <div class="fg"><label>السعر * (ل.س)</label><input id="f-price" type="number" value="${p?p.price:''}"></div>
+      <div class="fg"><label>الخصم %</label><input id="f-discount" type="number" value="${p?p.discount||0:0}" min="0" max="99"></div>
+    </div>
+    <div class="fr">
+      <div class="fg"><label>القسم</label><select id="f-cat">${cats.map(c=>`<option value="${c.id}" ${p&&p.cat===c.id?'selected':''}>${c.name}</option>`).join('')}</select></div>
+      <div class="fg"><label>الوحدة</label><select id="f-unit">${['كغ','لتر','قطعة','علبة','كيس','ربطة','رغيف','كرتونة'].map(u=>`<option ${p&&p.unit===u?'selected':''}>${u}</option>`).join('')}</select></div>
+    </div>
+    <div class="fr">
+      <div class="fg"><label>الوسم</label><select id="f-badge"><option value="">بدون</option>${['عرض','مميز','جديد'].map(b=>`<option value="${b}" ${p&&p.badge===b?'selected':''}>${b}</option>`).join('')}</select></div>
+      <div class="fg"><label>نشط</label><select id="f-active"><option value="true" ${!p||p.active!==false?'selected':''}>نعم</option><option value="false" ${p&&p.active===false?'selected':''}>لا</option></select></div>
+    </div>
+    <div class="fa">
+      <button class="btn btn-o" onclick="closeMd()">إلغاء</button>
+      <button class="btn btn-p" onclick="saveProd(${id||''})">حفظ</button>
+    </div>`;
+}
+
+async function saveProd(id){
+  const data={name:v('f-name'),sub:v('f-sub'),price:cv('f-price'),cat:v('f-cat'),unit:v('f-unit'),badge:v('f-badge'),discount:cv('f-discount'),active:v('f-active')==='true'};
+  if(!data.name||data.name.length<2){msg('الاسم قصير','e');return}
+  if(!data.price||data.price<1){msg('السعر غير صالح','e');return}
+  try{
+    if(id) await api('PUT','/api/products/'+id,data);
+    else await api('POST','/api/products',data);
+    closeMd();msg('تم الحفظ','ok');renderProds();
+  }catch(e){msg(e.message,'e')}
+}
+
+// === ORDERS ===
+async function renderOrds(){
+  const el=q('pg');el.innerHTML='<div class="em">جاري التحميل...</div>';
+  try{
+    const ords=await api('GET','/api/orders');
+    el.innerHTML=`
+      <div class="cd">
+        <div class="ch"><h3>الطلبات (${ords.length})</h3></div>
+        ${ords.length?`<div class="tw"><table><tr><th>الطلب</th><th>العميل</th><th>العنوان</th><th>المبلغ</th><th>الحالة</th><th>التاريخ</th><th></th></tr>${ords.map(o=>`
+          <tr><td style="font-weight:700;color:#1b6b3a;font-size:11px">${o.id}</td>
+          <td>${o.name||''} ${o.phone?'<br><span style="font-size:11px;color:#6b7280">+963 '+o.phone+'</span>':''}</td>
+          <td style="font-size:11px;max-width:120px;overflow:hidden;text-overflow:ellipsis">${o.address||'—'}</td>
+          <td>${sv(o.total)} ل.س</td>
+          <td><select class="st" data-oid="${o.id}" onchange="updStat('${o.id}',this.value)" style="padding:4px 6px;border-radius:6px;border:1px solid #e2e6ea;font-size:11px;background:var(--c)">
+            ${['pending','confirmed','preparing','delivering','delivered','cancelled'].map(s=>`<option value="${s}" ${o.status===s?'selected':''}>${{pending:'pending',confirmed:'مؤكد',preparing:'تحضير',delivering:'توصيل',delivered:'مكتمل',cancelled:'ملغي'}[s]}</option>`).join('')}
+          </select></td>
+          <td style="font-size:11px;color:#6b7280">${new Date(o.date).toLocaleDateString('ar-SA',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})}</td>
+          <td><button class="btn btn-s btn-d" onclick="delOrd('${o.id}')">حذف</button></td></tr>
+        `).join('')}</table></div>`:'<div class="em">لا توجد طلبات</div>'}
+      </div>`;
+  }catch(e){el.innerHTML='<div class="em">'+e.message+'</div>'}
+}
+
+async function updStat(id,s){
+  try{await api('PUT','/api/orders/'+id+'/status',{status:s});msg('تم التحديث','ok')}catch(e){msg(e.message,'e')}
+}
+async function delOrd(id){
+  if(!confirm('حذف الطلب؟'))return;
+  try{await api('DELETE','/api/orders/'+id);msg('تم الحذف','ok');renderOrds()}catch(e){msg(e.message,'e')}
+}
+
+// === CATEGORIES ===
+async function renderCats(){
+  const el=q('pg');el.innerHTML='<div class="em">جاري التحميل...</div>';
+  try{
+    const cats=await api('GET','/api/categories');
+    el.innerHTML=`
+      <div class="cd">
+        <div class="ch"><h3>الأقسام (${cats.length})</h3><button class="btn btn-p btn-s" onclick="addCat()">+ إضافة</button></div>
+        ${cats.length?`<div class="tw"><table><tr><th>#</th><th>الاسم</th><th></th></tr>${cats.map((c,i)=>`
+          <tr><td>${i+1}</td><td style="font-weight:600">${c.name}</td>
+          <td><div class="ac"><button class="btn btn-s" onclick="editCat('${c.id}')">تعديل</button><button class="btn btn-s btn-d" onclick="delCat('${c.id}')">حذف</button></div></td></tr>
+        `).join('')}</table></div>`:'<div class="em">لا توجد أقسام</div>'}
+      </div>`;
+  }catch(e){el.innerHTML='<div class="em">'+e.message+'</div>'}
+}
+
+async function addCat(){
+  const n=prompt('اسم القسم الجديد:');
+  if(!n)return;
+  try{await api('POST','/api/categories',{name:n,icon:'fa-tag',color:'#1b6b3a'});msg('تمت الإضافة','ok');renderCats()}catch(e){msg(e.message,'e')}
+}
+async function editCat(id){
+  const n=prompt('الاسم الجديد:');
+  if(!n)return;
+  try{await api('PUT','/api/categories/'+id,{name:n});msg('تم التحديث','ok');renderCats()}catch(e){msg(e.message,'e')}
+}
+async function delCat(id){
+  if(!confirm('حذف القسم؟'))return;
+  try{await api('DELETE','/api/categories/'+id);msg('تم الحذف','ok');renderCats()}catch(e){msg(e.message,'e')}
+}
+
+// === SETTINGS ===
+async function renderSets(){
+  const el=q('pg');el.innerHTML='<div class="em">جاري التحميل...</div>';
+  try{
+    const s=await api('GET','/api/settings');
+    el.innerHTML=`
+      <div class="cd">
+        <div class="ch"><h3>الإعدادات</h3></div>
+        <div class="fg"><label>مفتاح CallMeBot</label><input id="s-cmb" value="${s.callMeBotKey||''}" placeholder="API Key"></div>
+        <div class="fg"><label>رسوم التوصيل (ل.س)</label><input id="s-del" value="${s.deliveryFee||''}" placeholder="مثال: 5000"></div>
+        <button class="btn btn-p" onclick="saveSets()">حفظ الإعدادات</button>
+      </div>`;
+  }catch(e){el.innerHTML='<div class="em">'+e.message+'</div>'}
+}
+
+async function saveSets(){
+  try{await api('PUT','/api/settings',{callMeBotKey:v('s-cmb'),deliveryFee:v('s-del')});msg('تم الحفظ','ok')}catch(e){msg(e.message,'e')}
+}
+
+function closeMd(){q('md').classList.remove('s')}
+
+// === INIT ===
+renderMenu();
+if(tok){q('lp').classList.add('h');q('sh').classList.add('s');showPage('dash')}
+
+// Clock
+function clock(){const d=new Date();q('clk').textContent=d.toLocaleTimeString('ar-SA',{hour:'2-digit',minute:'2-digit'})}
+clock();setInterval(clock,60000);
+</script>
+</body>
+</html>
