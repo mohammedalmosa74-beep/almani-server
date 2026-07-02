@@ -1,1 +1,18 @@
-{"name":"almani-server","version":"1.0.0","description":"ط³ظˆط¨ط± ظ…ط§ط±ظƒطھ ط£ظ„ظ…ط§ظ†ظٹ - ط·ظ„ط¨ ظ…ظ†طھط¬ط§طھ ط£ظˆظ†ظ„ط§ظٹظ†","main":"server.js","scripts":{"start":"node server.js","postinstall":"echo skip"},"engines":{"node":"\u003e=18"},"dependencies":{"express":"^4.18.2"},"devDependencies":{},"keywords":[],"author":"","license":"ISC","type":"commonjs"}
+{
+  "name": "almani-server",
+  "version": "1.0.0",
+  "description": "سوبر ماركت ألماني - طلب منتجات أونلاين",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "postinstall": "echo skip"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "license": "ISC",
+  "type": "commonjs"
+}
