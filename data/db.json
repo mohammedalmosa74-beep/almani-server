@@ -1,0 +1,623 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "طماطم",
+      "sub": "Tomate",
+      "price": 7666,
+      "cat": "fruits",
+      "unit": "كغ",
+      "badge": "",
+      "active": true,
+      "image": "",
+      "discount": 15
+    },
+    {
+      "id": 2,
+      "name": "بطاطا",
+      "sub": "Kartoffel",
+      "price": 4000,
+      "cat": "fruits",
+      "unit": "كغ",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 3,
+      "name": "بصل",
+      "sub": "Zwiebel",
+      "price": 4500,
+      "cat": "fruits",
+      "unit": "كغ",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 4,
+      "name": "خيار",
+      "sub": "Gurke",
+      "price": 3500,
+      "cat": "fruits",
+      "unit": "كغ",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 5,
+      "name": "تفاح أحمر",
+      "sub": "Roter Apfel",
+      "price": 8000,
+      "cat": "fruits",
+      "unit": "كغ",
+      "badge": "عرض",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 6,
+      "name": "موز",
+      "sub": "Banane",
+      "price": 10000,
+      "cat": "fruits",
+      "unit": "كغ",
+      "badge": "مميز",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 7,
+      "name": "برتقال",
+      "sub": "Orange",
+      "price": 6000,
+      "cat": "fruits",
+      "unit": "كغ",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 8,
+      "name": "ليمون",
+      "sub": "Zitrone",
+      "price": 5500,
+      "cat": "fruits",
+      "unit": "كغ",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 9,
+      "name": "حليب طازج",
+      "sub": "Frische Milch",
+      "price": 6000,
+      "cat": "dairy",
+      "unit": "لتر",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 10,
+      "name": "لبن",
+      "sub": "Joghurt",
+      "price": 4000,
+      "cat": "dairy",
+      "unit": "كغ",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 11,
+      "name": "جبنة بيضاء",
+      "sub": "Weißkäse",
+      "price": 12000,
+      "cat": "dairy",
+      "unit": "كغ",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 12,
+      "name": "جبنة موزاريلا",
+      "sub": "Mozzarella",
+      "price": 15000,
+      "cat": "dairy",
+      "unit": "كغ",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 13,
+      "name": "بيض بلدي",
+      "sub": "Eier",
+      "price": 8000,
+      "cat": "dairy",
+      "unit": "كرتونة",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 14,
+      "name": "زبدة",
+      "sub": "Butter",
+      "price": 10000,
+      "cat": "dairy",
+      "unit": "كغ",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 15,
+      "name": "دجاج كامل",
+      "sub": "Ganzes Huhn",
+      "price": 22000,
+      "cat": "meat",
+      "unit": "كغ",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 16,
+      "name": "لحم غنم",
+      "sub": "Lammfleisch",
+      "price": 65000,
+      "cat": "meat",
+      "unit": "كغ",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 17,
+      "name": "لحم بقر",
+      "sub": "Rindfleisch",
+      "price": 55000,
+      "cat": "meat",
+      "unit": "كغ",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 18,
+      "name": "سمك طازج",
+      "sub": "Frischer Fisch",
+      "price": 30000,
+      "cat": "meat",
+      "unit": "كغ",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 19,
+      "name": "مياه معدنية",
+      "sub": "Mineralwasser",
+      "price": 1500,
+      "cat": "drinks",
+      "unit": "لتر",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 20,
+      "name": "عصير برتقال",
+      "sub": "Orangensaft",
+      "price": 5000,
+      "cat": "drinks",
+      "unit": "لتر",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 21,
+      "name": "كولا",
+      "sub": "Cola",
+      "price": 2500,
+      "cat": "drinks",
+      "unit": "علبة",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 22,
+      "name": "شاي أحمر",
+      "sub": "Schwarzer Tee",
+      "price": 8000,
+      "cat": "drinks",
+      "unit": "كغ",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 23,
+      "name": "قهوة عربية",
+      "sub": "Arabischer Kaffee",
+      "price": 18000,
+      "cat": "drinks",
+      "unit": "كغ",
+      "badge": "مميز",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 24,
+      "name": "أرز بسمتي",
+      "sub": "Basmatireis",
+      "price": 8000,
+      "cat": "grocery",
+      "unit": "كغ",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 25,
+      "name": "برغل",
+      "sub": "Bulgur",
+      "price": 6000,
+      "cat": "grocery",
+      "unit": "كغ",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 26,
+      "name": "معكرونة",
+      "sub": "Pasta",
+      "price": 4000,
+      "cat": "grocery",
+      "unit": "كغ",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 27,
+      "name": "زيت زيتون",
+      "sub": "Olivenöl",
+      "price": 25000,
+      "cat": "grocery",
+      "unit": "لتر",
+      "badge": "عرض",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 28,
+      "name": "زيت نباتي",
+      "sub": "Pflanzenöl",
+      "price": 12000,
+      "cat": "grocery",
+      "unit": "لتر",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 29,
+      "name": "سكر",
+      "sub": "Zucker",
+      "price": 7000,
+      "cat": "grocery",
+      "unit": "كغ",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 30,
+      "name": "ملح",
+      "sub": "Salz",
+      "price": 1500,
+      "cat": "grocery",
+      "unit": "كغ",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 31,
+      "name": "صابون غسيل",
+      "sub": "Waschmittel",
+      "price": 8000,
+      "cat": "cleaning",
+      "unit": "لتر",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 32,
+      "name": "منظف أرضيات",
+      "sub": "Bodenreiniger",
+      "price": 5000,
+      "cat": "cleaning",
+      "unit": "لتر",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 33,
+      "name": "صابون جلي",
+      "sub": "Spülmittel",
+      "price": 4000,
+      "cat": "cleaning",
+      "unit": "كغ",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 34,
+      "name": "مناديل ورقية",
+      "sub": "Papiertücher",
+      "price": 3500,
+      "cat": "cleaning",
+      "unit": "علبة",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 35,
+      "name": "شوكولاتة",
+      "sub": "Schokolade",
+      "price": 6000,
+      "cat": "snacks",
+      "unit": "قطعة",
+      "badge": "مميز",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 36,
+      "name": "بسكويت",
+      "sub": "Keks",
+      "price": 3000,
+      "cat": "snacks",
+      "unit": "علبة",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 37,
+      "name": "شيبس",
+      "sub": "Chips",
+      "price": 2500,
+      "cat": "snacks",
+      "unit": "كيس",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 38,
+      "name": "مكسرات مشكلة",
+      "sub": "Gemischte Nüsse",
+      "price": 20000,
+      "cat": "snacks",
+      "unit": "كغ",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 39,
+      "name": "خبز عربي",
+      "sub": "Arabisches Brot",
+      "price": 2000,
+      "cat": "bakery",
+      "unit": "ربطة",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 40,
+      "name": "خبز فرنسي",
+      "sub": "Baguette",
+      "price": 3000,
+      "cat": "bakery",
+      "unit": "رغيف",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 41,
+      "name": "كرواسون",
+      "sub": "Croissant",
+      "price": 4000,
+      "cat": "bakery",
+      "unit": "قطعة",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 42,
+      "name": "كيك شوكولاتة",
+      "sub": "Schokoladenkuchen",
+      "price": 8000,
+      "cat": "bakery",
+      "unit": "قطعة",
+      "badge": "",
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": 43,
+      "name": "سوريا",
+      "sub": "",
+      "price": 3,
+      "cat": "fruits",
+      "unit": "كغ",
+      "badge": "مميز",
+      "discount": 0,
+      "active": true,
+      "image": ""
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-MR0V6I70",
+      "items": [
+        {
+          "name": "تفاح أحمر",
+          "sub": "Roter Apfel",
+          "qty": 1,
+          "price": 8000,
+          "unit": "كغ"
+        },
+        {
+          "name": "موز",
+          "sub": "Banane",
+          "qty": 1,
+          "price": 10000,
+          "unit": "كغ"
+        }
+      ],
+      "status": "pending",
+      "date": "2026-06-30T16:31:44.796Z",
+      "total": 21000,
+      "payment": "cash",
+      "txnId": "",
+      "address": "عهغعه",
+      "lat": null,
+      "lng": null,
+      "phone": "938360343",
+      "name": "مستخدم"
+    },
+    {
+      "id": "ORD-MR0TVTTS",
+      "items": [
+        {
+          "name": "تفاح أحمر",
+          "sub": "Roter Apfel",
+          "qty": 1,
+          "price": 8000,
+          "unit": "كغ"
+        },
+        {
+          "name": "موز",
+          "sub": "Banane",
+          "qty": 1,
+          "price": 10000,
+          "unit": "كغ"
+        }
+      ],
+      "status": "delivered",
+      "date": "2026-06-30T15:55:27.040Z",
+      "total": 21000,
+      "payment": "cash",
+      "txnId": "",
+      "address": "fff",
+      "lat": null,
+      "lng": null,
+      "phone": "938360343",
+      "name": "مستخدم"
+    },
+    {
+      "id": "ORD-MR0TT02W",
+      "items": [
+        {
+          "name": "تفاح أحمر",
+          "sub": "Roter Apfel",
+          "qty": 1,
+          "price": 8000,
+          "unit": "كغ"
+        },
+        {
+          "name": "موز",
+          "sub": "Banane",
+          "qty": 1,
+          "price": 10000,
+          "unit": "كغ"
+        }
+      ],
+      "status": "delivered",
+      "date": "2026-06-30T15:53:15.176Z",
+      "total": 21000,
+      "payment": "cash",
+      "txnId": "",
+      "address": "jih",
+      "lat": null,
+      "lng": null,
+      "phone": "938360343",
+      "name": "مستخدم"
+    }
+  ],
+  "users": [],
+  "categories": [
+    {
+      "id": "fruits",
+      "name": "خضار وفواكه",
+      "icon": "fa-apple-whole",
+      "color": "#16A34A"
+    },
+    {
+      "id": "dairy",
+      "name": "ألبان وأجبان",
+      "icon": "fa-cheese",
+      "color": "#F59E0B"
+    },
+    {
+      "id": "meat",
+      "name": "لحوم ودواجن",
+      "icon": "fa-drumstick-bite",
+      "color": "#EF4444"
+    },
+    {
+      "id": "drinks",
+      "name": "مشروبات",
+      "icon": "fa-mug-hot",
+      "color": "#2563EB"
+    },
+    {
+      "id": "grocery",
+      "name": "مواد غذائية",
+      "icon": "fa-basket-shopping",
+      "color": "#92400E"
+    },
+    {
+      "id": "cleaning",
+      "name": "تنظيف ومنزل",
+      "icon": "fa-spray-can-sparkles",
+      "color": "#0891B2"
+    },
+    {
+      "id": "snacks",
+      "name": "حلويات وسناك",
+      "icon": "fa-cookie-bite",
+      "color": "#DB2777"
+    },
+    {
+      "id": "bakery",
+      "name": "مخبوزات",
+      "icon": "fa-bread-slice",
+      "color": "#EA580C"
+    }
+  ],
+  "settings": {
+    "callMeBotKey": "test123",
+    "deliveryFee": 3000
+  }
+}
