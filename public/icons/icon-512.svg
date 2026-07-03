@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="80" fill="#16A34A"/>
+  <text x="256" y="280" text-anchor="middle" fill="white" font-size="200" font-family="Arial,sans-serif" font-weight="bold">أ</text>
+  <text x="256" y="380" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-size="40" font-family="Arial,sans-serif">س.م.أ</text>
+</svg>
